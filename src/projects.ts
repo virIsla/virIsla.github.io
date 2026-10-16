@@ -70,6 +70,26 @@ export const projects: Project[] = [
     development: 'JavaScript handles game state, input events, scoring, timing, and collisions. Canvas draws the action-game boards, while DOM elements handle card and grid interactions. A standalone Snake page is embedded in the shared arcade, and localStorage keeps selected personal bests between visits.',
     status: 'Completed local browser arcade. Public hosting has not been completed. Personal bests are stored in the current browser when local storage is available; they do not sync between devices.',
   },
-  { title: 'Project three', type: 'DATABASE PROJECT', layout: 'data' },
+  {
+    title: 'Walnut Chess',
+    type: 'BROWSER CHESS GAME',
+    layout: 'data',
+    description: 'A warm, responsive chess experience for friendly matches and practice against the computer.',
+    overview: 'Walnut Chess brings the classic board game into the browser with a quiet, walnut-inspired design. Players can share one device with a friend or play white against a computer opponent, choosing a difficulty and an optional clock before taking their seat.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'chess.js', 'Web Workers'],
+    screenshots: [
+      { src: '/projects/walnut-chess-landing.jpg', title: 'Landing page', alt: 'Walnut Chess landing page with computer and friend opponent choices', caption: 'The welcome screen introduces the chess club and lets players choose their opponent. Match setup then offers an optional timer, plus three difficulty levels for computer games.' },
+      { src: '/projects/walnut-chess-friend.jpg', title: 'Vs friend', alt: 'Walnut Chess same-device friend match with player labels, board and move history', caption: 'Two friends take turns on the same device. The board shows legal move hints, tracks whose turn it is, and records moves, with undo and board-flip controls available during play.' },
+      { src: '/projects/walnut-chess-ai.jpg', title: 'Vs AI', alt: 'Walnut Chess computer match on Balanced difficulty after the opening moves', caption: 'Play white against the browser-based computer on Casual, Balanced, or Challenging difficulty. This Balanced match shows the computer responding to the opening move, with the move history alongside the board.' },
+    ],
+    features: [
+      { title: 'Two ways to play', description: 'Same-device matches with a friend or practice against a computer with three difficulty levels.' },
+      { title: 'Legal chess moves', description: 'Legal move hints, castling, en passant, promotion selection, and checkmate and draw detection powered by chess.js.' },
+      { title: 'Choose your pace', description: 'Untimed play or 3, 5, 10, or 15 minutes per player, with separate clocks and no increment.' },
+      { title: 'A thoughtful playing space', description: 'Move history, undo, manual board flipping, and a responsive board that adapts to the available screen space.' },
+    ],
+    development: 'HTML and CSS provide the interface, while JavaScript connects match setup, clocks, board interactions, and move history. The chess.js library validates the rules, and a Web Worker runs the lightweight computer search separately from the interface.',
+    status: 'Completed browser chess project. Friend mode uses one shared device; online multiplayer is not included. The computer is a lightweight local opponent, and matches are not saved after a page reload.',
+  },
   { title: 'Project four', type: 'RESPONSIVE WEBSITE', layout: 'mobile' },
 ];
