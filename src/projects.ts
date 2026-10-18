@@ -91,5 +91,26 @@ export const projects: Project[] = [
     development: 'HTML and CSS provide the interface, while JavaScript connects match setup, clocks, board interactions, and move history. The chess.js library validates the rules, and a Web Worker runs the lightweight computer search separately from the interface.',
     status: 'Completed browser chess project. Friend mode uses one shared device; online multiplayer is not included. The computer is a lightweight local opponent, and matches are not saved after a page reload.',
   },
-  { title: 'Project four', type: 'RESPONSIVE WEBSITE', layout: 'mobile' },
+  {
+    title: 'Hajime',
+    type: 'JAPANESE LEARNING WEBSITE',
+    layout: 'mobile',
+    description: 'A welcoming place to learn beginner Japanese through guided lessons, vocabulary, and sentence practice.',
+    overview: 'Hajime helps absolute beginners take small steps into Japanese. Learners can follow ten guided lessons or explore freely through beginner guides, kana charts, searchable vocabulary, and a sentence studio. Nothing is locked behind quiz completion, and no account is required.',
+    technologies: ['React', 'Vite', 'JavaScript', 'CSS', 'localStorage', 'Web Speech API'],
+    screenshots: [
+      { src: '/projects/hajime-landing.jpg', title: 'Landing page', alt: 'Hajime homepage with a Japanese landscape illustration and links to beginner lessons', caption: 'The homepage welcomes new learners with a landscape built in CSS, a first-lesson shortcut, and an introduction to the learning path.' },
+      { src: '/projects/hajime-lesson.jpg', title: 'Guided lessons', alt: 'Hajime hiragana study card with the character a, its reading, and lesson navigation', caption: 'Each lesson combines an explanation, a worked example, and five study cards with readings. Optional practice adds three-choice questions, hints, and mistake review.' },
+      { src: '/projects/hajime-vocabulary.jpg', title: 'Word garden', alt: 'Hajime searchable vocabulary explorer with category filters and bookmarkable word cards', caption: 'Browse 129 words across 11 categories, search for Japanese or English terms, and bookmark words for later. Word details include readings and example sentences.' },
+      { src: '/projects/hajime-sentences.jpg', title: 'Sentence studio', alt: 'Hajime sentence builder showing Japanese text, romaji, English meaning, and playback controls', caption: 'Combine words with 12 sentence patterns and explore eight everyday dialogues. Learners can hide romaji or English and use optional synthesized pronunciation with adjustable speed and repetition.' },
+    ],
+    features: [
+      { title: 'Ten guided lessons', description: 'Beginner topics include kana vowels, greetings, introductions, numbers, everyday vocabulary, and simple sentences.' },
+      { title: 'Explore at your own pace', description: 'Six beginner guides, 46 basic hiragana, 46 basic katakana, and a searchable vocabulary collection with bookmarks.' },
+      { title: 'Practice everyday sentences', description: 'Twelve patterns with 111 variations and eight dialogues support reading, recall, and optional speech playback.' },
+      { title: 'Progress in your browser', description: 'Lesson completion, latest and best quiz scores, and saved words are stored locally without an account.' },
+    ],
+    development: 'React components connect the guided lessons, vocabulary explorer, sentence studio, and progress views. Structured JavaScript content supplies the learning material, localStorage preserves progress and bookmarks, and the Web Speech API provides optional pronunciation. Custom CSS handles the responsive layouts and landscape illustration.',
+    status: 'Completed beginner learning website. Progress stays in the current browser and can be lost when its storage is cleared. Pronunciation requires an available Japanese device voice; it is synthesized audio, with written readings available as a fallback. No speech scoring is included.',
+  },
 ];
