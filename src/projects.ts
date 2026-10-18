@@ -114,4 +114,26 @@ export const projects: Project[] = [
     development: 'React components connect the guided lessons, vocabulary explorer, sentence studio, and progress views. Structured JavaScript content supplies the learning material, localStorage preserves progress and bookmarks, and the Web Speech API provides optional pronunciation. Custom CSS handles the responsive layouts and landscape illustration.',
     status: 'Completed beginner learning website. Progress stays in the current browser and can be lost when its storage is cleared. Pronunciation requires an available Japanese device voice; it is synthesized audio, with written readings available as a fallback. No speech scoring is included.',
   },
+  {
+    title: 'River Club',
+    type: 'BROWSER CARD GAME',
+    layout: 'web',
+    description: 'A play-money Texas Hold’em table with four bots, a beginner guide, and an optional teaching coach.',
+    overview: 'River Club combines a responsive five-seat poker table with a beginner-friendly learning experience. Players start with 1,000 play chips and practice against four local bots, explore the rules in a separate guide, or enable a coach that explains their cards and available decisions.',
+    technologies: ['React', 'TypeScript', 'Vite', 'CSS', 'Motion'],
+    screenshots: [
+      { src: '/projects/river-club-welcome.jpg', title: 'Welcome table', alt: 'River Club welcome screen with a green poker table, five seats, and a Take your seat button', caption: 'The welcome screen introduces the Green Room: a five-seat Texas Hold’em table with 1,000 play chips per player, four bots, and fixed 10/20 blinds.' },
+      { src: '/projects/river-club-table.jpg', title: 'Gameplay', alt: 'River Club poker hand with player cards, chip stacks, pot, and betting controls', caption: 'The gameplay view brings cards, chip stacks, the pot, and turn indicators together. Players can fold, check, call, or adjust their bet, while animated dealing and hand history help follow the action.' },
+      { src: '/projects/river-club-guide.jpg', title: 'Beginner guide', alt: 'River Club beginner guide showing four lesson tabs and the Make your best five lesson', caption: 'A separate learning page explains the goal, betting rounds, showdown, hand rankings, and common actions, with a quiz and worked example. Opening the guide preserves the table and pauses bot turns.' },
+      { src: '/projects/river-club-coach.jpg', title: 'Player coach', alt: 'River Club table with the optional coach explaining a king-two offsuit hand and suggesting a fold', caption: 'The optional coach explains the current hand and call price and suggests a move using only the player’s cards and public table information. It is a local rule-based teaching aid; the player confirms every action.' },
+    ],
+    features: [
+      { title: 'Five-seat practice table', description: 'Play against four local bots with adjustable bets, all-ins, rotating dealer positions, and hand history.' },
+      { title: 'Poker rules engine', description: 'Seven-card hand evaluation, kickers, tied hands, side pots, and short all-in raise handling.' },
+      { title: 'Learn while playing', description: 'Four beginner lessons, expandable hand rankings, a practice question, and an optional coach with explanations.' },
+      { title: 'Responsive presentation', description: 'Animated card dealing, optional sound, reduced-motion support, and custom CSS/SVG table artwork.' },
+    ],
+    development: 'React and TypeScript connect the table, betting controls, guide, and coach. A separate game engine manages hand evaluation, betting transitions, shuffling, and bot decisions, while Motion animates the cards. Automated engine and coach tests cover game rules and teaching behavior.',
+    status: 'Completed browser game using play chips only, with no deposits, purchases, or cash prizes. It runs locally in the browser without accounts or online multiplayer. Refreshing resets the table; the coach preference is saved locally.',
+  },
 ];
